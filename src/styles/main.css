@@ -1,0 +1,21 @@
+/* Custom styles for the expense tracker */
+
+.budget-bar {
+  @apply w-full bg-secondary rounded-full h-2;
+}
+
+.budget-progress {
+  @apply bg-primary h-2 rounded-full transition-all duration-300;
+}
+
+.nav-link {
+  @apply flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-colors;
+}
+
+.nav-link.active {
+  @apply bg-primary text-primary-foreground;
+}
+
+.nav-link:not(.active) {
+  @apply text-muted-foreground hover:text-foreground hover:bg-accent;
+}
