@@ -10,7 +10,6 @@ import { AuthProvider, useAuth } from "./context/AuthContext.js";
 import { ExpenseProvider } from "./context/ExpenseContext.js";
 import { CurrencyProvider } from "./context/CurrencyContext.js";
 import { CurrencyConversionProvider } from "./context/CurrencyConversionContext.js";
-import { CategoryProvider } from "./context/CategoryContext.js";
 import { BudgetProvider } from "./context/BudgetContext.js";
 import { RecurringExpenseProvider } from "./context/RecurringExpenseContext.js";
 import { SystemDataProvider } from "./context/SystemDataContext.js";
@@ -304,16 +303,14 @@ function App() {
         <SystemDataProvider>
           <CurrencyProvider>
             <CurrencyConversionProvider>
-              <CategoryProvider>
-                <BudgetProvider>
-                  <ExpenseProvider>
-                    <RecurringExpenseProvider>
-                      <AppContent />
-                      <Toaster />
-                    </RecurringExpenseProvider>
-                  </ExpenseProvider>
-                </BudgetProvider>
-              </CategoryProvider>
+              <BudgetProvider>
+                <ExpenseProvider>
+                  <RecurringExpenseProvider>
+                    <AppContent />
+                    <Toaster />
+                  </RecurringExpenseProvider>
+                </ExpenseProvider>
+              </BudgetProvider>
             </CurrencyConversionProvider>
           </CurrencyProvider>
         </SystemDataProvider>
